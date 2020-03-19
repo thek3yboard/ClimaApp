@@ -8,6 +8,7 @@ from tkinter import ttk
 import datetime
 import json
 import pycountry_convert as pc
+import keyboard
 
 app = tk.Tk()   #Para que todo este en una sola ventana
 
@@ -49,7 +50,6 @@ def format_response(weather_json):
 def obtenerDatos(city=None, zip_code=None):
     api_key1 = '6019371bb8ea6411b0b32d26b57d0670'
     api_url1 = 'https://api.openweathermap.org/data/2.5/weather'
-    
 
     #api_key2 = 'e9cb89eb59mshbb07811deb874bbp1f91dfjsnd2cc92e7fc4e'
     #api_url2 = 'weatherbit-v1-mashape.p.rapidapi.com'
@@ -226,7 +226,11 @@ textbox = tk.Entry(frame, font=('Bahnschrift', 15))     # Textbox
 textbox.place(relwidth=0.65, relheight=1)               #
 
 submit = tk.Button(frame, text='Ver clima', font=('Bahnschrift', 15), command=lambda: obtenerDatos(textbox.get()))  # Botón de submit
-submit.place(relx=0.7, relheight=1, relwidth=0.3)                                                                   #
+submit.place(relx=0.7, relheight=1, relwidth=0.3)
+
+
+app.bind("<Return>", lambda x: obtenerDatos(textbox.get()))  # Bind a la tecla Enter para que sirva como alternativa de clickear el botón Submit
+                                                      
 
 lower_frame = tk.Frame(app, bg='#42c2f4', bd=10)                                    # Contorno del rectángulo inferior donde irá la información del clima
 lower_frame.place(relx=0.5, rely=0.25, relwidth=0.75, relheight=0.6, anchor='n')    #
@@ -238,7 +242,6 @@ results.place(relwidth=1, relheight=1)                              #
 
 weather_icon = tk.Canvas(results, bg=bg_color, bd=0, highlightthickness=0) # Configuración del ícono del clima
 weather_icon.place(relx=.75, rely=0, relwidth=1, relheight=0.5)            #
-
 
 
 
