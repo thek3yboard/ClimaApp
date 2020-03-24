@@ -219,20 +219,20 @@ background_label.place(x=0, y=0, relwidth=1, relheight=1)   #
 
 C.pack()
 
-frame = tk.Frame(app,  bg='#42c2f4', bd=5)                                  # Contorno del textbox
+frame = tk.Frame(app,  bg='#eba80c', bd=5)                                  # Contorno del textbox
 frame.place(relx=0.5, rely=0.1, relwidth=0.75, relheight=0.1, anchor='n')   #
 
 textbox = tk.Entry(frame, font=('Bahnschrift', 15))     # Textbox
 textbox.place(relwidth=0.65, relheight=1)               #
 
-submit = tk.Button(frame, text='Ver clima', font=('Bahnschrift', 15), command=lambda: obtenerDatos(textbox.get()))  # Botón de submit
+submit = tk.Button(frame, text='Ver clima', font=('Baloo Da 2', 15), command=lambda: obtenerDatos(textbox.get()))  # Botón de submit
 submit.place(relx=0.7, relheight=1, relwidth=0.3)
 
 
 app.bind("<Return>", lambda x: obtenerDatos(textbox.get()))  # Bind a la tecla Enter para que sirva como alternativa de clickear el botón Submit
                                                       
 
-lower_frame = tk.Frame(app, bg='#42c2f4', bd=10)                                    # Contorno del rectángulo inferior donde irá la información del clima
+lower_frame = tk.Frame(app, bg='#eba80c', bd=10)                                    # Contorno del rectángulo inferior donde irá la información del clima
 lower_frame.place(relx=0.5, rely=0.25, relwidth=0.75, relheight=0.6, anchor='n')    #
 
 bg_color = 'white'      # Color de fondo del textbox y el cuadro de información
