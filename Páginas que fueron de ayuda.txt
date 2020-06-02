@@ -1,7 +1,0 @@
-https://en.wikipedia.org/wiki/List_of_cities_by_average_temperature/ ---- Para los promedios por estacion
-
-https://openweathermap.org/current ---- Esta es la api que use para realizar esta app
-
-https://www.w3schools.com/python/ ---- Para corroborar sintáxis de python
-
-https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes ---- Para hacer pruebas (estos son los códigos de los países que deben ser usados)
